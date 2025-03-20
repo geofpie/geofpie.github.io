@@ -10,6 +10,7 @@ body {
 
 .mono-subtitle {
     font-family: Roboto Mono;
+    color: #A3BE8C;
 }
 
 .intro-header {
@@ -26,4 +27,27 @@ body {
 .hero-header {
     height: auto;
     width: 100%;
+    text-align: left;
+}
+
+.name-highlight {
+    background: linear-gradient(90deg, #FC466B, #3F5EFB, #FC466B);
+    font-weight: 600;
+    background-size: 300% 100%;
+    color: #000;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animatedTextGradient 8s ease-in-out infinite;
+}
+
+@keyframes animatedTextGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
