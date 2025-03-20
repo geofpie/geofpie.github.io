@@ -1,0 +1,29 @@
+h1, h2, h3, h4, h5, h6 {
+    font-family: Sora;
+    font-weight: 600;
+}
+
+body {
+    font-family: Sora;
+    text-align: center;
+}
+
+.mono-subtitle {
+    font-family: Roboto Mono;
+}
+
+.intro-header {
+    background: linear-gradient(45deg, #0f0c29 0%, #24243e 33%, #302b63 100%);
+    color: white;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-header {
+    height: auto;
+    width: 100%;
+}
