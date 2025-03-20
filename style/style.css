@@ -111,13 +111,68 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+.navbar .nav-item {
+    margin-right: 24px; /* Adjust spacing between navbar items */
+}
+
+.navbar .nav-item:last-child {
+    margin-right: 0; /* Ensures the last item doesn’t have extra space */
+}
+
 .navbar-brand {
     color: #ECEFF4;
 }
 
 .nav-link {
     color: white;
-    font-size: 24px;
+    font-size: 18px;
+}
+
+.nav-link:hover {
+    color: #FC466B;
+    transition: 0.2s ease-in-out;
+}
+
+.nav-animated {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 40px;
+    overflow: hidden;
+    justify-content: flex-start; /* Prevents jarring movement */
+    transition: width 0.3s ease-in-out, gap 0.3s ease-in-out;
+}
+
+.nav-animated .nav-text {
+    opacity: 0;
+    white-space: nowrap;
+    margin-left: 5px; /* Reduce margin for better alignment */
+    transform: translateX(-5px); /* Smooth slide-in */
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    font-size: 14px;
+}
+
+.nav-animated:hover {
+    width: auto;
+    min-width: fit-content;
+    padding-right: 10px;
+}
+
+.nav-animated:hover .nav-text {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* For mobile view, always show text */
+@media (max-width: 992px) {
+    .nav-animated {
+        width: auto;
+    }
+
+    .nav-animated .nav-text {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 .btn-gradient {
