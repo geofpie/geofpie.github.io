@@ -5,7 +5,6 @@ h1, h2, h3, h4, h5, h6 {
 
 body {
     font-family: Sora;
-    text-align: center;
     background-color: #ECEFF4;
     color: #2E3440;
 }
@@ -170,6 +169,30 @@ body {
 .contact-btn {
     color: white;
     font-weight: 600;
+}
+
+.section-header {
+    font-family: Roboto Mono;
+    font-size: 16px;
+    font-weight: 400;
+    padding-bottom: 1em;
+}
+
+.generic-section {
+    padding-top: 3em;
+    text-align: left;
+}
+
+.fancy-text {
+    line-height: 2rem;
+}
+
+.divider-row {
+    padding-top: 3em;
+}
+
+.divider hr {
+    border-top: 3px solid white;
 }
 
 /* Dark Mode Styles*/
