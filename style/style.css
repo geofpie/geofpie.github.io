@@ -714,30 +714,210 @@ body {
   .cert-tags .pill:hover {
     background-color: rgba(255, 255, 255, 0.2);
   }
+
+  @keyframes floatPopIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px) scale(0.97);
+      filter: blur(4px);
+    }
+    80% {
+      opacity: 1;
+      transform: translateY(-2px) scale(1);
+      filter: blur(0);
+    }
+    100% {
+        opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+/* Project Card Container */
+.project-card {
+    opacity: 0;
+    transition: box-shadow 0.3s ease;
+    margin-bottom: 1rem;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+    background: transparent;
+    padding: 0;
+  }
+
+  .project-card.animate-in {
+    animation: floatPopIn 0.8s ease-out forwards;
+    pointer-events: auto; /* re-enable interaction */
+  }
   
-  .contact-content {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(6px);
-    padding: 2rem;
-    border-radius: 12px;
-    max-width: 500px;
+  /* Hero Header with Image — now fully flush */
+  .project-hero {
+    position: relative;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    border-radius: 0; /* ensure no rounded edges here */
+  }
+  
+  /* Overlay stays centered and full */
+  .project-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1.5rem 2rem;
+    color: #ECEFF4;
+    backdrop-filter: blur(4px);
+    opacity: 0.9;
+    transition: backdrop-filter 0.4s ease, opacity 0.4s ease;
+    border-radius: 0;
+  }
+  
+  .project-hero:hover .project-overlay {
+    backdrop-filter: blur(8px);
+    opacity: 1;
+  }
+  
+  .project-hero:hover {
+    transform: scale(1.01);
+  }
+  
+  .project-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin: 0;
+  }
+  
+  .project-subtitle {
+    font-size: 0.95rem;
+    font-weight: 400;
+    margin-top: 0.5rem;
+    color: #D8DEE9;
+  }
+  
+  /* Glass Section (Initially Collapsed) */
+  .project-glass {
+    max-height: 0;
+    opacity: 0;
+    transform: translateY(10px);
+    overflow: hidden;
+    background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.015) 0%,
+    rgba(255, 255, 255, 0.05) 20%,
+    rgba(255, 255, 255, 0.015) 40%
+  ),
+  var(--glass-tint, rgba(255, 255, 255, 0.03)); /* fallback tint */
+
+  background-blend-mode: overlay;
+  background-size: 300% 100%;
+  backdrop-filter: blur(12px);
+    padding: 0 2rem;
+    transition:
+      max-height 0.6s ease,
+      padding 0.4s ease,
+      opacity 0.4s ease,
+      transform 0.4s ease;
+    color: #ECEFF4;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  
+  .project-glass::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 0;
+    right: 0;
+    height: 40px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), transparent);
+    filter: blur(12px);
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .project-glass > * {
+    position: relative;
+    z-index: 2;
+  }
+  
+  /* When Expanded */
+  .project-glass.expanded {
+    max-height: 500px;
+    opacity: 1;
+    transform: translateY(0);
+    padding: 0 1rem 2rem 2rem;
+  }
+  
+  /* Links */
+  .project-links {
     margin-top: 1rem;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    display: flex;
+    gap: 1.5rem;
   }
   
-  .obfuscated-email {
-    font-family: 'Roboto Mono', monospace;
+  .project-links a {
     color: #88C0D0;
-    font-size: 0.9rem;
-  }
-  
-  .contact-content a {
-    color: #88C0D0;
-    font-weight: 600;
     text-decoration: none;
+    font-weight: 600;
     transition: color 0.3s ease;
   }
   
-  .contact-content a:hover {
+  .project-links a:hover {
     color: #EBCB8B;
+  }
+
+  .project-stack {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .stack-label {
+    display: block;
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+    font-size: 11px;
+    margin-bottom: 0.5rem;
+  }
+  
+  .stack-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  .stack-tags .pill {
+    background-color: rgba(255, 255, 255, 0.08);
+    color: #D8DEE9;
+    font-size: 0.75rem;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-family: Roboto Mono, monospace;
+    font-weight: 500;
+    transition: background 0.3s ease;
+  }
+  
+  .stack-tags .pill:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .project-title {
+      font-size: 1.1rem;
+    }
+  
+    .project-subtitle {
+      font-size: 0.85rem;
+    }
+  
+    .project-glass.expanded {
+      padding: 1.5rem;
+    }
   }
