@@ -714,5 +714,30 @@ body {
   .cert-tags .pill:hover {
     background-color: rgba(255, 255, 255, 0.2);
   }
-
   
+  .contact-content {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(6px);
+    padding: 2rem;
+    border-radius: 12px;
+    max-width: 500px;
+    margin-top: 1rem;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  }
+  
+  .obfuscated-email {
+    font-family: 'Roboto Mono', monospace;
+    color: #88C0D0;
+    font-size: 0.9rem;
+  }
+  
+  .contact-content a {
+    color: #88C0D0;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .contact-content a:hover {
+    color: #EBCB8B;
+  }
