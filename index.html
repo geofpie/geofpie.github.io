@@ -101,13 +101,41 @@
          <div class="container d-flex flex-column justify-content-center align-items-center">
             <!-- Introduction -->
             <div id="about" class="row w-100 generic-section">
-                <div class="col-lg-6">
-                    <h2 class="section-header">// about me <i class="bi bi-person"></i> </h2>
-                    <p class="name-sub">name</p>
-                    <p class="detail-sub">Geoffrey Lee</p>
-                    <p class="fancy-text">I'm a tech enthusiast and problem solver with a passion for designing secure, high-performance network infrastructures. I’m currently pursuing a Bachelor of Science (Honours) in Applied Computing at Singapore Institute of Technology while gaining real-world experience through the Singtel Catalyst Work-Study Programme.</p>
+                <div class="container">
+                  <h2 class="section-header">// about me <i class="bi bi-person"></i></h2>
+                  <div class="row align-items-center">
+              
+                    <!-- Left: Funky Glass Profile Pic -->
+                    <div class="col-md-4 text-center">
+                      <div class="funky-avatar-frame about-item">
+                        <img src="images/geoff_lofi.profile.png" alt="Geoffrey's Avatar" class="profile-avatar-funky" />
+                      </div>
+                    </div>
+              
+                    <!-- Right: Bio Content -->
+                    <div class="col-md-8">
+                      <p class="name-sub about-item">name</p>
+                      <p class="detail-sub about-item">Geoffrey Lee</p>
+                      <p class="fancy-text about-item">
+                        I’m a tech-minded problem solver who enjoys building things that are clean, secure, and powerful. I’m studying Applied Computing at SIT and gaining hands-on experience through the Singtel Catalyst Work-Study Programme.                      <p class="fancy-text about-item">
+                        This site is a blend of my technical work and creative explorations — a space where I share the things I build, automate, and sometimes break. I'm particularly excited about self-hosted infrastructure, clean front-end design, and systems that scale elegantly.
+                      </p>
+                      <p class="top-skills-header about-item">Top Skills</p>
+                      <div class="stack-tags about-item">
+                        <span class="pill">HTML/CSS</span>
+                        <span class="pill">Network Infrastructure</span>
+                        <span class="pill">Client Experience</span>
+                        <span class="pill">Design</span>
+                      </div>
+                      <div class="about-cta mt-4 about-item">
+                        <a href="#projects" class="btn-glass"><i class="bi bi-archive"></i> My Projects</a>
+                        <a href="#contact" class="btn-glass"><i class="bi bi-envelope"></i> Contact Me</a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-            </div>
+              </div>
+              
             <div class="row w-100 divider-row">
                 <hr class="divider">
             </div>
@@ -117,17 +145,17 @@
                 <div class="timeline">
                     <div class="timeline-item">
                         <div class="timeline-icon">
-                          <img src="images/ncs_logo.jpeg" alt="NCS" />
+                          <img src="images/ncs_logo.jpeg" alt="NCS Logo" />
                         </div>
                         <div class="timeline-content">
                           <h4 class="job-title">Infrastructure Engineer (Network)</h4>
                           <p class="company-name">NCS Group</p>
                           <p class="timeline-date">Feb 2025 – Present</p>
-                          <p>Manage enterprise network infrastructure to ensure high availability, security, and performance.</p>
-                          <p>Provide Level 2 support and troubleshoot complex network incidents with cross-functional teams.</p>
-                          <p>Deploy and optimise enterprise networking solutions with architects and provisioning teams.</p>
-                          <p>Lead change management and impact analysis to maintain network stability.</p>
-                          <p>Configure and fine-tune Cisco networking systems to meet enterprise needs.</p>
+                          <p>Manage enterprise network infrastructure, ensuring high availability, security, and performance for critical systems.</p>
+                          <p>Provide Level 2 support, troubleshooting complex network incidents and working with cross-functional teams to drive rapid resolution.</p>
+                          <p>Collaborate with solutions architects and provisioning teams to deploy and optimise enterprise networking solutions.</p>
+                          <p>Conduct change management and impact analysis, ensuring network stability while introducing new configurations.</p>
+                          <p>Work extensively with Cisco networking solutions, configuring and fine-tuning systems to meet client requirements.</p>
                           <div class="skill-pills">
                             <span class="pill">Cisco Networking</span>
                             <span class="pill">Incident Response</span>
@@ -138,16 +166,18 @@
                       
                       <div class="timeline-item">
                         <div class="timeline-icon">
-                          <img src="images/singtel_logo.jpg" alt="Singtel" />
+                          <img src="images/singtel_logo.jpg" alt="Singtel Logo" />
                         </div>
                         <div class="timeline-content">
                           <h4 class="job-title">Network Engineer</h4>
                           <p class="company-name">Singtel</p>
                           <p class="timeline-date">Oct 2023 – Feb 2025</p>
-                          <p>Managed network operations for an enterprise client with a focus on availability, security, and performance.</p>
-                          <p>Provided Level 2 support and implemented Change Management processes for stability and compliance.</p>
-                          <p>Optimised Cisco networking configurations and contributed to automation for operational efficiency.</p>
-                          <p>Collaborated across teams to deliver enterprise Day 2 networking solutions.</p>
+                          <p>Managed network operations for a key enterprise client, ensuring high availability, performance, and security.</p>
+                          <p>Provided Level 2 support, troubleshooting complex network incidents, and driving timely resolution to minimise downtime.</p>
+                          <p>Conducted impact analysis and implemented Change Management processes to maintain network stability and compliance.</p>
+                          <p>Worked extensively with Cisco networking solutions, optimising configurations and ensuring seamless integration.</p>
+                          <p>Collaborated with solutions and provisioning teams to deliver enterprise networking solutions from a Day 2 operations perspective.</p>
+                          <p>Designed and implemented process automation and scripting to enhance operational efficiency and reduce manual tasks.</p>
                           <div class="awards">
                             <p class="awards-label"><i class="bi bi-award"></i> Awards & Recognition:</p>
                             <ul class="awards-list">
@@ -168,14 +198,17 @@
                       
                       <div class="timeline-item">
                         <div class="timeline-icon">
-                          <img src="images/saf_logo.jpg" alt="Singapore Armed Forces" />
+                          <img src="images/saf_logo.jpg" alt="Singapore Armed Forces Logo" />
                         </div>
                         <div class="timeline-content">
                             <h4 class="job-title">Simulation Operator (Development) <span class="ns-tag">Full-Time National Service</span></h4>
                             <p class="company-name">Singapore Armed Forces</p>
                             <p class="timeline-date">Aug 2021 – Aug 2023</p>
-                            <p>Generated 2D/3D maps and maintained a simulation object database for military training simulations.</p>
-                            <p>Led map optimisations to boost simulation performance, deployed in major exercises with positive impact.</p>
+                            <p>Served as a Simulation Operator at HQ TRADOC, responsible for generating 2D and 3D maps for military simulation exercises.</p>
+                            <p>Maintained and optimised a simulation object database (SQL-like) to ensure seamless integration and performance of simulation assets.</p>
+                            <p>Led enhancements and optimisations for a major simulation map, significantly improving performance despite complex parameters.</p>
+                            <p>The enhanced map was deployed in multiple large-scale military exercises, improving user experience and operational effectiveness based on direct feedback.</p>
+                            <p>Recognised for outstanding contributions with a Commander Coin from Head Armour Planning Group (APG) and awarded Best Soldier of the Month for exceptional performance.</p>
                             <div class="awards">
                               <p class="awards-label"><i class="bi bi-award"></i> Awards & Recognition:</p>
                               <ul class="awards-list">
@@ -201,9 +234,10 @@
                           <h4 class="job-title">Specialist</h4>
                           <p class="company-name">Apple</p>
                           <p class="timeline-date">Apr 2020 – Aug 2021</p>
-                          <p>Contributed to the launch of Apple Marina Bay Sands by supporting merchandising, tech setup, and training.</p>
-                          <p>Mentored new hires through real-time customer engagement and ecosystem training.</p>
-                          <p>Led store improvement projects to elevate customer experience and operational efficiency.</p>
+                          <p>Played a key role in the successful launch of Apple Marina Bay Sands, contributing to visual merchandising, technology setup, and employee training to ensure a seamless store opening.</p>
+                          <p>Provided hands-on mentorship to new hires, fostering learning opportunities through real-world customer interactions and in-depth training on Apple’s ecosystem and retail technologies.</p>
+                          <p>Led and collaborated on cross-functional projects to enhance store operations, optimise customer experience, and drive key business initiatives.</p>
+                          <p>Delivered exceptional customer experiences, demonstrating expertise in Apple products and guiding customers toward solutions tailored to their needs.</p>
                           <div class="skill-pills">
                             <span class="pill">Retail Operations</span>
                             <span class="pill">Mentorship</span>
@@ -223,8 +257,11 @@
                           <h4 class="job-title">Product Expert / At Home Advisor</h4>
                           <p class="company-name">Apple</p>
                           <p class="timeline-date">Apr 2020 – Aug 2020</p>
-                          <p>Delivered remote sales and support to Southeast Asia and ANZ markets during COVID-19 closures.</p>
-                          <p>Guided customers through Apple’s ecosystem and resolved technical inquiries.</p>
+                          <p>Provided remote sales and support to customers across Southeast Asia, Australia, and New Zealand during Apple Retail Store closures due to COVID-19, ensuring seamless customer experiences.</p>
+                          <p>Efficiently processed and managed customer orders, ensuring accuracy, timely fulfillment, and issue resolution.</p>
+                          <p>Delivered expert sales support, guiding customers through Apple’s product ecosystem and tailoring recommendations to their needs, contributing to revenue growth.</p>
+                          <p>Adapted to diverse cultural and regional needs, effectively assisting international customers with sales inquiries and support requests.</p>
+                          <p>Maintained high customer satisfaction through personalized solutions, proactive issue resolution, and an emphasis on Apple’s world-class service standards.</p>
                           <div class="skill-pills">
                             <span class="pill">Sales</span>
                             <span class="pill">Remote Support</span>
@@ -242,8 +279,11 @@
                           <h4 class="job-title">Specialist</h4>
                           <p class="company-name">Apple</p>
                           <p class="timeline-date">May 2018 – Apr 2020</p>
-                          <p>Built strong customer relationships, consistently maintaining NPS >80.</p>
-                          <p>Advised businesses on Apple workflow integration and delivered impactful product demos.</p>
+                          <p>Built meaningful customer relationships, driving sales and maintaining consistently high Net Promoter Scores (NPS) >80+ with full responses, reflecting strong customer satisfaction.</p>
+                          <p>Identified customer needs and provide tailored solutions, ensuring an optimal Apple experience through personalized product recommendations.</p>
+                          <p>Advised enterprises on integrating Apple’s ecosystem into their workflows, enhancing efficiency and productivity.</p>
+                          <p>Quickly adapted to new product launches, software updates, and technological advancements, ensuring customers received up-to-date and relevant information.</p>
+                          <p>Delivered clear, engaging, and informative product demonstrations, enhancing customer understanding and driving informed purchasing decisions.</p>
                           <div class="skill-pills">
                             <span class="pill">Retail Operations</span>
                             <span class="pill">Customer Experience</span>
@@ -256,15 +296,17 @@
                       </div>
                       <div class="timeline-item">
                         <div class="timeline-icon">
-                          <img src="images/asretec_logo.jpg" alt="Asretec" />
+                          <img src="images/asretec_logo.jpg" alt="Asretec Logo" />
                         </div>
                         <div class="timeline-content">
                           <h4 class="job-title">Sales & Marketing Specialist <span class="intern-tag">Internship</span></h4>
                           <p class="company-name">Asretec Pte Ltd</p>
                           <p class="timeline-date">Sep 2016 – Oct 2016</p>
-                          <p>Executed Facebook ad campaigns, improving reach and engagement.</p>
-                          <p>Produced educational decks and video content for outreach.</p>
-                          <p>Analysed ad performance and assisted in website development improvements.</p>
+                          <p>Managed social media strategy, advertising, and analytics, enhancing the online presence of Asretec’s group of companies, with a primary focus on Facebook marketing.</p>
+                          <p>Developed and executed targeted advertising campaigns, driving audience engagement and brand visibility.</p>
+                          <p>Created educational decks and promotional commercials, demonstrating strong content development skills to increase online engagement.</p>
+                          <p>Conducted performance analysis of digital campaigns, leveraging data-driven insights to optimize marketing strategies.</p>
+                          <p>Contributed to web development initiatives, improving digital platforms and user experience.</p>
                           <div class="skill-pills">
                             <span class="pill">Digital Marketing</span>
                             <span class="pill">Facebook Ads</span>
@@ -511,6 +553,50 @@
                       </div>
                     </div>
                   </div>
+                  <!-- Card -->
+                <div class="project-card" style="--glass-tint: rgba(245, 140, 28, 0.1);">
+                    <!-- Hero Header -->
+                    <div class="project-hero" style="background-image: url('images/projects/thissite_Header.png');" onclick="this.nextElementSibling.classList.toggle('expanded')">
+                      <!-- Hardcoded overlay glass layer -->
+                        <div class="project-overlay">
+                        <h3 class="project-title">this site.</h3>
+                        <p class="project-subtitle">My most opinionated project so far — you’re looking at it.</p>
+                        <span class="project-toggle-icon"><i class="bi bi-caret-down"></i></span>
+                      </div>
+                    </div>
+                    <!-- Expandable Glass Content -->
+                    <div class="project-glass">
+                        <!-- Project Details Row -->
+                        <div class="project-details">
+                            <div class="detail-block">
+                            <span class="label">Date</span>
+                            <span class="value">Ongoing</span>
+                            </div>
+                            <div class="detail-block">
+                            <span class="label">Associated With</span>
+                            <span class="value">Personal</span>
+                            </div>
+                        </div>
+                        <div class="project-stack">
+                            <strong class="stack-label">Stack</strong>
+                            <div class="stack-tags">
+                              <span class="pill">Design System</span>
+                              <span class="pill">Frontend</span>
+                              <span class="pill">HTML/CSS</span>
+                              <span class="pill">Procrastinated Elegance</span>
+                            </div>
+                          </div>
+                      <p>Built from scratch using HTML, CSS, and JavaScript — no templates, no frameworks, just a lot of trial, error, and quiet persistence. It features custom animations, glassmorphism, scroll effects, and a touch of lofi flair. This site is where I test ideas, break things intentionally, and occasionally rework entire sections in the middle of the night — for fun, not for caffeine.</p>
+                      <p>Yes, I put this site in my own projects list. Meta, I know.</p>
+                      <div class="project-tldr">
+                        <span class="tldr-header">tl;dr</span>
+                        <p>A hand-built, fully responsive portfolio site that’s part resume, part design lab, part late-night overengineering experiment.</p>
+                      </div>
+                      <div class="project-links">
+                        <button class="btn-here sparkle-btn" onclick="triggerHereEffect(this)" data-tooltip="You're literally here."><i class="bi bi-emoji-smile-upside-down"></i> You're Here!</button>                      
+                    </div>
+                    </div>
+                  </div>
             </div>
             <div class="row w-100 divider-row">
                 <hr class="divider">
@@ -538,7 +624,7 @@
                       </div>
                       <div class="timeline-item">
                         <div class="timeline-icon">
-                          <img src="images/sp_logo.jpg" alt="Apple" />
+                          <img src="images/sp_logo.jpg" alt="Logo of Singapore Polytechnic" />
                         </div>
                         <div class="timeline-content">
                           <h4 class="job-title">Diploma, Computer Engineering</h4>
@@ -678,10 +764,42 @@
                 <hr class="divider">
             </div>
             <!-- Contact -->
-            <div id="contact" class="row w-100 generic-section">
-                <h2 class="section-header">// contact <i class="bi bi-envelope"></i></h2>
-            </div>
-         </div>
+<div id="contact" class="container generic-section">
+    <h2 class="section-header">// get in touch <i class="bi bi-envelope"></i></h2>
+  
+    <div class="row align-items-center">
+      <!-- Left Column: Text & Links -->
+      <div class="col-lg-6 mb-5 mb-lg-0 contact-item">
+        <p class="fancy-text contact-item">
+          Like what you see? Drop me a line, send a meme, or share your latest Spotify obsession.
+          Always happy to connect — whether it’s about tech, side projects, cool things on the internet, or why your Git commit messages matter.
+          <br><br>
+          P.S. I reserve the right to silently judge your music taste.
+        </p>
+        <div class="d-flex flex-wrap gap-3 mt-4 contact-item">
+          <a href="mailto:geoffreyleejh@gmail.com" class="btn-glass">
+            <i class="bi bi-envelope"></i> Email Me
+          </a>
+          <a href="https://github.com/geofpie" target="_blank" class="btn-glass">
+            <i class="bi bi-github"></i> GitHub
+          </a>
+          <a href="https://linkedin.com/in/gljh" target="_blank" class="btn-glass">
+            <i class="bi bi-linkedin"></i> LinkedIn
+          </a>
+        </div>
+      </div>
+  
+      <!-- Right Column: Funky Video -->
+      <div class="col-lg-6 text-center">
+        <div class="funky-lofi-video-wrapper contact-item">
+          <video autoplay muted loop playsinline class="funky-lofi-video">
+            <source src="videos/contact_vid.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
          <footer class="site-footer">
             <div class="footer-links">
                 <a href="#">About</a>
@@ -692,6 +810,8 @@
             </div>
             <div class="footer-copyright">
                 © 2025 Geoffrey Lee. All rights reserved.
+                <br>
+                built, broken and rebuilt by geoff.
             </div>
         </footer>
     </body>

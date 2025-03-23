@@ -72,6 +72,62 @@ body {
     padding: 0 10vh 0 10vh;
 }
 
+.funky-avatar-frame {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    padding: 8px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    display: inline-block;
+    max-width: 100%;
+    animation: morphBlob 12s ease-in-out infinite;
+  }
+  
+  /* Keep the image matching the morph shape */
+  .profile-avatar-funky {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: inherit;
+  }
+  
+  /* Keyframes for smooth organic blob morphing */
+  @keyframes morphBlob {
+    0% {
+      border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    }
+    50% {
+      border-radius: 40% 60% 65% 35% / 35% 40% 60% 65%;
+    }
+    100% {
+      border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    }
+  }
+  
+  .profile-avatar-funky {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: inherit;
+  }
+
+  .fun-facts {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    color: #D8DEE9;
+    display: grid;
+    gap: 0.5rem;
+  }
+  
+  .fun-facts li::before {
+    color: #EBCB8B;
+    margin-right: 0.5rem;
+  }
+  
 .hero-header {
     height: auto;
     width: 100%;
@@ -111,7 +167,8 @@ body {
     border-radius: 50px;
     padding: 10px 20px;
     border: 2px solid rgba(50, 50, 50, 0.1);
-    background: rgba(0, 0, 0, 0.15);    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(10px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     display: flex;
     align-items: center;
@@ -248,19 +305,17 @@ body {
 }
 
 /* Responsive adjustments */
-@media (max-width: 768px) {
+@media (max-width: 990px) {
     #navbar {
         width: 90%;
         max-width: none;
         padding: 10px 15px;
         backdrop-filter: blur(10px);
-        background: rgba(255, 255, 255, 0.15); /* Ensure persistent background for mobile */
         transition: width 0.4s ease-in-out, padding 0.3s ease-in-out;
     }
 
     .nav-animated {
         padding: 6px 12px;
-        background: rgba(255, 255, 255, 0.15); /* Match frosted navbar background */
         backdrop-filter: blur(10px);
         border-radius: 25px;
         transition: background 0.3s ease-in-out, padding 0.3s ease-in-out;
@@ -289,11 +344,54 @@ body {
     font-family: Roboto Mono;
     margin-bottom: 0;
     color: #4C566A;
+    margin-top: 1.5em;
 }
 
 .detail-sub {
     font-size: 32px;
 }
+
+.top-skills-header {
+    color: rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.btn-glass {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-right: 0.5rem;
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: #ECEFF4;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    backdrop-filter: blur(8px);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  }
+  
+  .btn-glass:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: #EBCB8B;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+    transform: translateY(-1px);
+  }
+  
+  .about-item {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  
+  .about-item.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+  }
 
 .btn-gradient {
     position: relative;
@@ -591,16 +689,27 @@ body {
     font-size: 12px;
     background-color: rgba(255, 148, 112, 0.7);
     border-radius: 16px;
-    padding: 4px 12px 4px 12px;
-    margin: 0 18px 0 18px;
+    padding: 4px 12px;
+    white-space: nowrap;
+    display: inline-block;
+    vertical-align: middle;
   }
 
   .ns-tag {
     font-size: 12px;
     background-color: rgba(22, 160, 133, 0.7);
     border-radius: 16px;
-    padding: 4px 12px 4px 12px;
-    margin: 0 18px 0 18px;
+    padding: 4px 12px;
+    white-space: nowrap;
+    display: inline-block;
+    vertical-align: middle;
+  }
+ 
+  @media (max-width: 960px) {
+    .intern-tag,
+    .ns-tag {
+        margin-top: 0.5em;
+    }
   }
 
   .cert-list {
@@ -677,7 +786,6 @@ body {
   }
   
   .cert-links a {
-    margin-top: 1.5em;
     font-size: 0.8rem;
     color: #ECEFF4;
     background: rgba(255, 255, 255, 0.05);
@@ -685,7 +793,7 @@ body {
     backdrop-filter: blur(6px);
     border-radius: 12px;
     padding: 6px 14px;
-    margin-right: 1rem;
+    margin-right: 0.5rem;
     text-decoration: none;
     font-weight: 600;
     transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
@@ -792,7 +900,7 @@ body {
     padding: 0;
     width: 100%;
   }
-  
+
   .project-overlay {
     position: relative;
     display: flex;
@@ -1038,36 +1146,166 @@ body {
     font-family: Roboto Mono, monospace;
   }
 
-  .lightbox-overlay {
-    display: none;
-    position: fixed;
-    z-index: 9999;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.75);
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .lightbox-content {
+  .btn-here {
     position: relative;
-    width: 90%;
-    max-width: 800px;
-    aspect-ratio: 16 / 9;
-    background: #000;
-    border-radius: 12px;
+    z-index: 1;
     overflow: hidden;
-  }
-  
-  .lightbox-content iframe {
-    width: 100%;
-    height: 100%;
-  }
-  
-  .lightbox-close {
-    position: absolute;
-    top: 0.75rem;
-    right: 1rem;
-    font-size: 2rem;
-    color: #fff;
+    display: inline-block;
+    padding: 0.5rem 1.25rem;
+    font-weight: 600;
+    font-size: 0.8rem;
+    color: #ECEFF4;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    transition: all 0.3s ease;
+    text-decoration: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
     cursor: pointer;
+  }
+  
+  /* Rainbow shimmer layer */
+  .btn-here::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    border-radius: inherit;
+    opacity: 0;
+    background: linear-gradient(
+      90deg,
+      red,
+      orange,
+      yellow,
+      green,
+      cyan,
+      blue,
+      violet
+    );
+    background-size: 400% 100%;
+    transition: opacity 0.3s ease;
+  }
+  
+  .btn-here.rainbow-activated::before {
+    animation: glassyRainbowSweep 1.6s ease-out;
+    opacity: 0.4;
+  }
+  
+  @keyframes glassyRainbowSweep {
+    0% {
+      background-position: 0% 50%;
+      opacity: 0.4;
+    }
+    50% {
+      background-position: 100% 50%;
+      opacity: 0.6;
+    }
+    100% {
+      background-position: 0% 50%;
+      opacity: 0;
+    }
+  }
+  
+  /* Tooltip and sparkles remain the same */
+  
+  /* Tooltip styling */
+.btn-here[data-tooltip] {
+    position: relative;
+  }
+  
+  .btn-here[data-tooltip]::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: calc(100% + 6px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(6px);
+    font-size: 0.7rem;
+    color: #ECEFF4;
+    padding: 4px 10px;
+    border-radius: 8px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 10;
+  }
+  
+  .btn-here:hover::after {
+    opacity: 1;
+  }
+  
+  /* Sparkle container */
+  .sparkle-btn {
+    position: relative;
+    overflow: visible;
+  }
+  
+  /* Sparkle style */
+  .sparkle {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: white;
+    box-shadow: 0 0 6px 2px #fff;
+    opacity: 0.9;
+    pointer-events: none;
+    animation: sparkle-fade 0.8s ease forwards;
+  }
+  
+  @keyframes sparkle-fade {
+    0% {
+      transform: translate(0, 0) scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: translate(var(--x), var(--y)) scale(0.5);
+      opacity: 0;
+    }
+  }
+  
+  .funky-lofi-video-wrapper {
+    width: 75%;
+    max-width: 400px;
+    margin: 0 auto;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    animation: morphBlob 12s ease-in-out infinite;
+  }
+  
+  .funky-lofi-video {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+  }
+  
+  /* Funky morph animation */
+  @keyframes morphBlob {
+    0% {
+      border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    }
+    50% {
+      border-radius: 40% 60% 65% 35% / 35% 40% 60% 65%;
+    }
+    100% {
+      border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    }
+  }
+
+  .contact-item {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  
+  .contact-item.animate-in {
+    opacity: 1;
+    transform: translateY(0);
   }
