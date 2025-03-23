@@ -683,7 +683,7 @@ body {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(6px);
-    border-radius: 999px;
+    border-radius: 12px;
     padding: 6px 14px;
     margin-right: 1rem;
     text-decoration: none;
@@ -978,6 +978,7 @@ body {
   
     .project-glass.expanded {
       padding: 1.5rem;
+      max-height: 1200px;
     }
   }
 
